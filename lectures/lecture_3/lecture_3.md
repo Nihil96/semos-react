@@ -298,6 +298,30 @@ ChildComponent.propTypes = {
 }
 ```
 
+**Explanation:**
+
+1. Parent Component:
+
+- Holds an object userInfo in its state, containing properties like name, age, and location.
+- Passes the userInfo object and a function updateUserInfo to the child component.
+
+2. Child Component:
+
+- Receives the userInfo and updateUserInfo function through props.
+- When the "Move to San Francisco" button is clicked, the child calls the updateUserInfo function, passing an updated location to modify the parent’s state.
+
+### Important!
+
+When working with reference data types in React
+
+In React, we need to copy the object before updating it to ensure that we respect the principle of immutability. React's state should always be treated as immutable, meaning we should never directly modify the existing state. Instead, we create a new copy of the state with the necessary changes and then update the state with that new copy.
+
+**Why is this important?**
+
+- Efficient Re-rendering: React uses shallow comparison to determine whether a component should re-render. If you directly mutate the state, React might not detect the changes because the reference to the object in memory stays the same. By copying the object, we create a new reference, which React can easily detect, triggering a re-render as needed.
+
+- State Consistency: Directly mutating state can lead to unpredictable behavior, especially in larger applications where multiple components depend on the state. Creating copies ensures that other components that rely on the old state won’t be unexpectedly affected.
+
 ## Conditional Rendering in React
 
 Conditional rendering in React allows you to display different UI elements based on certain conditions. This is a fundamental concept that enhances the interactivity and user experience of your application. You can use JavaScript logical operators like if, ternary, or even short-circuit evaluation to achieve this.
