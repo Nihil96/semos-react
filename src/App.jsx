@@ -1,24 +1,35 @@
-import "./App.css"
-import Counter from "./examples/lecture_3/components/counter"
-import Greeting from "./examples/lecture_3/components/greeting"
-import MessageNotificator from "./examples/lecture_3/components/messageNotificator"
-import User from "./examples/lecture_3/components/user"
+import { useState } from "react"
+// import DynamicName from "./examples/lecture_4/dynamicName"
+// import SimpleEffect from "./examples/lecture_4/simpleEffect"
+// import EffectOnce from "./examples/lecture_4/effectOnce"
+// import EffectWithDeps from "./examples/lecture_4/effectWithDeps"
+import EffectUnmount from "./examples/lecture_4/effectUnmount"
+import InfiniteLoop from "./examples/lecture_4/InfiniteLoop"
+import Users from "./examples/lecture_4/users"
+import TextInput from "./examples/lecture_4/textInput"
 
 function App() {
-  function greetAlert(name) {
-    alert(`Hello, I am ${name}`)
+  const [toggleBoolean, setToggleBoolean] = useState(false)
+  const [showComponent, setShowComponent] = useState(true)
+
+  function stateIsChanging() {
+    setToggleBoolean(!toggleBoolean)
   }
 
-  let message = "Buy me some apples"
-
+  // console.log("Parent component render")
   return (
     <div>
-      {/* <Counter />
-      <Counter />
-      <Counter /> */}
-      {/* <Greeting name="Marko" greetAlert={greetAlert} /> */}
-      <User isLoggedIn={false} />
-      <MessageNotificator msg={message} />
+      {/* <DynamicName /> */}
+      <button onClick={stateIsChanging}>Change State</button>
+      <button onClick={() => setShowComponent(!showComponent)}>
+        Show Component
+      </button>
+      {/* <SimpleEffect /> */}
+      {/* <EffectOnce /> */}
+      {/* <EffectWithDeps /> */}
+      {/* {showComponent && <EffectUnmount toggleBoolean={toggleBoolean} />} */}
+      {/* <Users /> */}
+      <TextInput />
     </div>
   )
 }
