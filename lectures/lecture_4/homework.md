@@ -19,14 +19,14 @@ Instructions:
      - Red if the counter is a negative number.
      - White if the counter is 0.
 4. Display the Counter Value:
-
-- Show the current counter value in the center of the component.
+   - Show the current counter value in the center of the component.
 
 **Example Output:**
 
 When a user clicks the "Increment" or "Decrement" button, the counter value updates, and the background color changes accordingly.
 
 **Bonus Challenge:**
+
 Add a button to reset the counter to 0.
 Implement a feature to prevent the counter from going below a certain negative threshold (e.g., -10).
 
