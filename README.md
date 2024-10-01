@@ -24,6 +24,16 @@ provided code.
 This repository contains the code examples we'll be working on in each class, along with learning
 materials for each topic. Additionally, you'll find exercises to reinforce your understanding.
 
+## Submitting Homework
+
+After every lecture, there will be a homework assignment to complete. Please follow these steps to properly submit your work:
+
+1. Create repository for each homework assignment on GitHub.
+2. Inside that repository, create a new folder for each homework assignment using a naming convention like homework_1, homework_2, etc.
+3. Inside the homework folder, include your solution files with clear names, such as exercise_1, exercise_2, etc.
+4. This structured approach helps you organize your assignments and makes it easier for me to review your work.
+5. Submission: Once you complete the homework, please send me the link to your repository via email at: kostadinoskihristijan@gmail.com.
+
 ## How to Contribute
 
 If you find any issues, typos, or have suggestions for improvement, please feel free to open an issue or submit a pull request.
