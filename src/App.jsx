@@ -1,16 +1,19 @@
-import ColorChanger from "./examples/lecture_5/components/colorChange"
-// import KeyboardEvents from "./examples/lecture_5/components/keyboardEvents"
-// import MouseEvents from "./examples/lecture_5/components/mouseEvents"
 import "./App.css"
-import ArrowKeyDisplay from "./exercises/exercise_1/arrowKeyDisplay"
+import CheckboxForm from "./examples/lecture_6/components/checkboxForm"
+import DropdownForm from "./examples/lecture_6/components/dropdownForm"
+import FormWithValidation from "./examples/lecture_6/components/formWithValidation"
+import RadioButtonForm from "./examples/lecture_6/components/radioButtonForm"
+import UncontrolledInput from "./examples/lecture_6/components/uncontrolledInput"
 
 function App() {
   return (
     <div>
-      {/* <MouseEvents />
-      <KeyboardEvents /> */}
-      {/* <ColorChanger /> */}
-      <ArrowKeyDisplay />
+      {/* <BasicForm /> */}
+      {/* <RadioButtonForm /> */}
+      {/* <CheckboxForm /> */}
+      {/* <DropdownForm /> */}
+      {/* <UncontrolledInput /> */}
+      <FormWithValidation />
     </div>
   )
 }
