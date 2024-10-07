@@ -1,4 +1,6 @@
-# Exercise: Multi-Input Form
+## Homework 6
+
+### Exercise: Multi-Input Form
 
 **Objective:**
 Create a more complex form in React that includes not only text inputs but also radio buttons, checkboxes, and a dropdown. Implement the form using only controlled component.
