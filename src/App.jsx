@@ -1,18 +1,20 @@
-// import { useState } from "react"
+import { Route, Routes } from "react-router-dom"
 import "./App.css"
-import Header from "./examples/lecture_8/components/header"
-import ParentCounter from "./examples/lecture_8/components/parentCounter"
-import { CounterProvider } from "./examples/lecture_8/context/counterContext"
+import Home from "./exercises/exercise_4/home"
+import { AuthProvider } from "./exercises/exercise_4/context/authContext"
+import Navbar from "./exercises/exercise_4/navbar"
+import Login from "./exercises/exercise_4/login"
 
 function App() {
-  // const [user] = useState({ name: "Michael Smith", age: 30 })
-
   return (
     <div>
-      {/* <Header /> */}
-      <CounterProvider>
-        <ParentCounter />
-      </CounterProvider>
+      <AuthProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </AuthProvider>
     </div>
   )
 }
