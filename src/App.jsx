@@ -1,15 +1,18 @@
-import { Route, Routes } from "react-router-dom"
+// import { useState } from "react"
 import "./App.css"
-import PostsList from "./exercises/exercises_3/pages/postsList"
-import PostDetail from "./exercises/exercises_3/pages/postDetail"
+import Header from "./examples/lecture_8/components/header"
+import ParentCounter from "./examples/lecture_8/components/parentCounter"
+import { CounterProvider } from "./examples/lecture_8/context/counterContext"
 
 function App() {
+  // const [user] = useState({ name: "Michael Smith", age: 30 })
+
   return (
     <div>
-      <Routes>
-        <Route path="/posts" element={<PostsList />} />
-        <Route path="/posts/post/:id" element={<PostDetail />} />
-      </Routes>
+      {/* <Header /> */}
+      <CounterProvider>
+        <ParentCounter />
+      </CounterProvider>
     </div>
   )
 }
