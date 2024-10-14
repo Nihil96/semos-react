@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+// NOTE: This custom hook works fine but is overkill
 export function useAverage(numbers) {
   const [average, setAverage] = useState(0)
 
