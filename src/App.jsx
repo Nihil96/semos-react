@@ -10,6 +10,7 @@ import UsersDetail from "./examples/lecture_9/components/usersDetail"
 import calculateAverage from "./examples/lecture_9/helpers/calculateAverage"
 import { useAverage } from "./examples/lecture_9/hooks/useAverage"
 import useCounter from "./examples/lecture_9/hooks/useCounter"
+import MouseTracker from "./exercises/exercise_5/mouseTracker"
 
 // function App() {
 //   return (
@@ -33,18 +34,19 @@ function App() {
 
   const averageNumbers = calculateAverage([1, 2, 3, 4, 5])
 
-  console.log(averageNumbers)
+  // console.log(averageNumbers)
   return (
     <>
       {/* <PostsDetail /> */}
       {/* <UsersDetail /> */}
-      <h1>Counter Value: {counter}</h1>
+      {/* <h1>Counter Value: {counter}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
       <button onClick={reset}>Reset</button>
 
       <h2>Average: {average} - result from the custom hook</h2>
-      <h2>Average: {averageNumbers} - result from the helper function</h2>
+      <h2>Average: {averageNumbers} - result from the helper function</h2> */}
+      <MouseTracker />
     </>
   )
 }
