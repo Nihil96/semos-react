@@ -5,6 +5,7 @@
 // import Navbar from "./exercises/exercise_4/navbar"
 // import Login from "./exercises/exercise_4/login"
 
+import Counter from "./examples/lecture_10/components/counter"
 import PostsDetail from "./examples/lecture_9/components/postsDetail"
 import UsersDetail from "./examples/lecture_9/components/usersDetail"
 import calculateAverage from "./examples/lecture_9/helpers/calculateAverage"
@@ -27,26 +28,21 @@ import MouseTracker from "./exercises/exercise_5/mouseTracker"
 // }
 
 // export default App
+import "./App.css"
+import { useSelector } from "react-redux"
+import { useState } from "react"
+import Auth from "../src/examples/lecture_10/components/auth"
 
 function App() {
-  const { counter, increment, decrement, reset } = useCounter(50)
-  const average = useAverage([1, 2, 3, 4, 5])
+  const count = useSelector((state) => state.counter.count)
+  const [name, setName] = useState("Hristijan")
 
-  const averageNumbers = calculateAverage([1, 2, 3, 4, 5])
-
-  // console.log(averageNumbers)
   return (
     <>
-      {/* <PostsDetail /> */}
-      {/* <UsersDetail /> */}
-      {/* <h1>Counter Value: {counter}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
-
-      <h2>Average: {average} - result from the custom hook</h2>
-      <h2>Average: {averageNumbers} - result from the helper function</h2> */}
-      <MouseTracker />
+      <h1>Counter: {count}</h1>
+      {name}
+      <Counter />
+      <Auth />
     </>
   )
 }
