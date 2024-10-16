@@ -32,17 +32,14 @@ import "./App.css"
 import { useSelector } from "react-redux"
 import { useState } from "react"
 import Auth from "../src/examples/lecture_10/components/auth"
+import ProductList from "./exercises/exercise_6/components/productList"
+import Cart from "./exercises/exercise_6/components/cart"
 
 function App() {
-  const count = useSelector((state) => state.counter.count)
-  const [name, setName] = useState("Hristijan")
-
   return (
     <>
-      <h1>Counter: {count}</h1>
-      {name}
-      <Counter />
-      <Auth />
+      <ProductList />
+      <Cart />
     </>
   )
 }
