@@ -29,17 +29,12 @@ import MouseTracker from "./exercises/exercise_5/mouseTracker"
 
 // export default App
 import "./App.css"
-import { useSelector } from "react-redux"
-import { useState } from "react"
-import Auth from "../src/examples/lecture_10/components/auth"
-import ProductList from "./exercises/exercise_6/components/productList"
-import Cart from "./exercises/exercise_6/components/cart"
+import UsersList from "./examples/lecture_11/components/usersList"
 
 function App() {
   return (
     <>
-      <ProductList />
-      <Cart />
+      <UsersList />
     </>
   )
 }
