@@ -29,12 +29,12 @@ import MouseTracker from "./exercises/exercise_5/mouseTracker"
 
 // export default App
 import "./App.css"
-import UsersList from "./examples/lecture_11/components/usersList"
+import WeatherDetails from "./exercises/exercise_7/components/weatherDetails"
 
 function App() {
   return (
     <>
-      <UsersList />
+      <WeatherDetails />
     </>
   )
 }
