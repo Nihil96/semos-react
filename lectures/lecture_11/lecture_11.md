@@ -4,6 +4,65 @@
 
 In this lecture, we will explore how middleware enhances Redux's functionality, especially when handling asynchronous actions like API calls. We will use Redux Thunk, one of the most common middleware for managing side effects in Redux applications. Finally, we'll learn how to work with asynchronous actions using the useSelector and useDispatch hooks.
 
+## What is Redux Thunk?
+
+Redux Thunk is a middleware for Redux that allows you to write action creators that return a function (instead of an action object). This is especially useful for handling asynchronous logic like fetching data from an API. Normally, Redux only allows plain action objects to be dispatched, but with Redux Thunk, you can dispatch functions, which gives you more control over the timing and flow of your actions.
+
+## What is Middleware?
+
+Middleware in Redux is essentially a bridge between the dispatching of an action and the moment it reaches the reducer. It allows you to intercept actions and modify or handle them before they hit the reducer. Middleware is powerful because it can be used to handle side effects (e.g., API calls) and manage asynchronous actions.
+
+Think of middleware as a filter where actions pass through before they go to the reducer, and you can use that filter to add custom behavior, logging, or any asynchronous logic.
+
+## How Redux Thunk Works
+
+Redux Thunk works by letting action creators return a function that receives dispatch and getState as arguments, allowing you to dispatch actions manually inside that function. This is particularly useful when you need to delay the dispatching of an action (for example, after an API request is resolved).
+
+**Example without Thunk**
+
+In Redux, normally you'd create a simple action like this:
+
+```js
+// Action Creator
+const fetchUser = (userId) => ({
+  type: "FETCH_USER",
+  payload: userId,
+})
+```
+
+However, this is synchronous, and in real-world applications, you'd often need to make asynchronous calls (like fetching data from an API), which can't be done with plain actions.
+
+**Example with Thunk**
+
+With redux-thunk, you can write asynchronous logic like this:
+
+```js
+// Action Creator with Thunk
+const fetchUser = (userId) => {
+  return async (dispatch) => {
+    dispatch({ type: "FETCH_USER_REQUEST" }) // Before making the request
+
+    try {
+      const response = await fetch(`https://api.example.com/users/${userId}`)
+      const data = await response.json()
+
+      dispatch({ type: "FETCH_USER_SUCCESS", payload: data }) // Success action
+    } catch (error) {
+      dispatch({ type: "FETCH_USER_FAILURE", error: error.message }) // Error handling
+    }
+  }
+}
+```
+
+Here’s a breakdown of what’s happening:
+
+1. The fetchUser action returns a function (instead of an object) that takes dispatch as an argument.
+2. Inside the returned function, you can dispatch multiple actions:
+
+- A request action (FETCH_USER_REQUEST) before starting the async operation.
+- A success action (FETCH_USER_SUCCESS) once the data is received.
+- A failure action (FETCH_USER_FAILURE) if the request fails.
+
 ## Working with Middleware in Redux
 
 Middleware in Redux provides a way to extend Redux's capabilities by intercepting actions before they reach the reducer. It allows us to handle side effects, such as logging, API requests, or even modifying actions.
@@ -40,10 +99,6 @@ In this example, every action dispatched will first go through the loggerMiddlew
 ## Making Asynchronous API Calls with Redux Thunk
 
 One of the most common tasks in modern applications is making asynchronous API calls. Redux by itself only handles synchronous actions, but with Redux Thunk, we can work with asynchronous actions as well.
-
-### What is Redux Thunk?
-
-Redux Thunk is a middleware that allows you to write action creators that return functions instead of action objects. Inside these functions, you can perform asynchronous logic such as fetching data from an API and then dispatch the appropriate action based on the API response.
 
 ### Why Use Redux Thunk?
 
