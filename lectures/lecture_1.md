@@ -31,28 +31,34 @@ Many leading companies use React to build their web applications, including:
 We say that React is a library and not a framework, but what exactly does a library means? A library is a set of pre-compiled routines, classes, functions, or resources that developers can include and call within their own software projects. Libraries provide a way to share and reuse code, promoting efficiency and consistency across applications.
 
 **Characteristics of a Library**
-Reusable Code: Libraries contain reusable components that can be utilized across multiple projects without modification.
-Modularity: Libraries are typically modular, allowing developers to include only the parts they need.
-Abstraction: Libraries provide abstractions, making complex tasks simpler by encapsulating detailed implementation.
-API (Application Programming Interface): Libraries offer a defined API that specifies how the routines, functions, and classes within the library should be used.
+- **Reusable Code**: Libraries contain reusable components that can be utilized across multiple projects without modification.
+- **Modularity**: Libraries are typically modular, allowing developers to include only the parts they need.
+- **Abstraction**: Libraries provide abstractions, making complex tasks simpler by encapsulating detailed implementation.
+- **API (Application Programming Interface)**: Libraries offer a defined API that specifies how the routines, functions, and classes within the library should be used.
 
 **Benefits of Using Libraries**
-Efficiency: Libraries save development time by providing pre-written and tested code.
-Reliability: Libraries are often well-tested and maintained, reducing the likelihood of bugs.
-Consistency: Using libraries ensures that common tasks are performed in a consistent manner across different projects.
-Focus: Libraries allow developers to focus on the unique aspects of their applications rather than reinventing common functionalities.
+- **Efficiency**: Libraries save development time by providing pre-written and tested code.
+- **Reliability**: Libraries are often well-tested and maintained, reducing the likelihood of bugs.
+- **Consistency**: Using libraries ensures that common tasks are performed in a consistent manner across different projects.
+- **Focus**: Libraries allow developers to focus on the unique aspects of their applications rather than reinventing common functionalities.
 
 **React is a library and not a framework**
+
 React is a JavaScript library for building user interfaces. It provides components, state management, and a virtual DOM to efficiently update and render UI changes.
 
 ### Key Features of React as a Library:
 
-**Component-Based Architecture:** React allows developers to build encapsulated components that manage their own state and compose them to make complex UIs.
+**Component-Based Architecture:** 
 
-**Virtual DOM:** React uses a virtual DOM to optimize updates and rendering, improving performance.
+React allows developers to build encapsulated components that manage their own state and compose them to make complex UIs.
+
+**Virtual DOM:** 
+
+React uses a virtual DOM to optimize updates and rendering, improving performance.
 Reusable Components: React components can be reused across different parts of an application or even in different projects.
 
 **Comparison with Frameworks**
+
 While libraries provide specific functionality and can be included as needed, frameworks offer a more comprehensive solution, often dictating the architecture and flow of an application. A library is typically more lightweight and flexible, whereas a framework is more opinionated and integrated.
 
 ### What is a SPA?
