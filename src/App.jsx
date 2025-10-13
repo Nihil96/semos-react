@@ -1,58 +1,46 @@
 
-import { Component } from 'react'
+import { useState } from 'react'
 import './App.css'
-import SimpleCounter from './examples/lecture_2/components/simpleCounter'
-import UserCard from './examples/lecture_2/components/userCard'
-import Greeting from './examples/lecture_2/components/greeting'
-import FruitList from './examples/lecture_2/components/fruitList'
+import Counter from './examples/lecture_3/components/counter'
+import Greeting from './examples/lecture_3/components/greeting'
+import Message from './examples/lecture_3/components/message'
+import Parent from './examples/lecture_3/components/parent'
+import User from './examples/lecture_3/components/user'
 
+function App() {
+  const [show, setShow] = useState(true)
+  const [color, setColor] = useState("#cccccc")
 
-class App extends Component {
-  constructor(){
-    super()
-
-    this.state = {
-      showCounter: true
-    }
+  const greet = (name) => {
+    alert(`Hello ${name}`)
   }
 
-  toggleCounter = () => {
-    this.setState({showCounter: !this.state.showCounter})
+  function toggleMsg() {
+   setShow(!show)
   }
 
-  render(){
-    console.log(this.state, "App State")
-    return (
-      <div>
-        {/* ======= Example 1: Lifecycle methods ======= */}
+  const changeColor = (newColor) => setColor(newColor)
 
-        {/* <button onClick={this.toggleCounter}>{this.state.showCounter ? 'Hide Component' : 'Show Component'}</button>
-        {this.state.showCounter ? <SimpleCounter /> : null} */}
+  return(
+    <>
+    {/* Example of state in functional components */}
+    {/* <Counter />
+    <Counter />
+    <Counter /> */}
 
-         {/* ======= Example 2: Passing Props ======= */}
-         {/* <UserCard 
-          img="https://ip.index.hr/remote/bucket.index.hr/b/index/269a7f4b-7b4e-42dc-ab05-fcf876e4c716.png" 
-          name="Brad Pit"
-          address="Las Vegas"
-         /> 
-         <UserCard 
-         img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Johnny_Depp_%28July_2009%29_2_cropped.jpg/250px-Johnny_Depp_%28July_2009%29_2_cropped.jpg" 
-        name="Johnny"
-        address="Las Vegas"
-         />
-         <UserCard img="https://m.media-amazon.com/images/M/MV5BMTM3OTUwMDYwNl5BMl5BanBnXkFtZTcwNTUyNzc3Nw@@._V1_FMjpg_UX1000_.jpg"
-          name="Scarlett"
-          address="Las Vegas"
-         /> */}
+    {/* Example of passing a function as a prop */}
+    {/* <Greeting name="Darko" greetAlert={greet} /> */}
 
-          {/* ======= Example 3: PropTypes ======= */}
-          {/* <Greeting name={2321} age={29} /> */}
+    {/* Example 3 */} 
+    {/* <Message msg="Hello there, React is awesome" toggleMsg={toggleMsg} show={show} color={color} changeMsgColor={changeColor}/> */}
+    
+    {/* Example 4 */}
+    {/* <Parent /> */}
 
-          {/* ======= Example 3: Iterating Over Lists ======= */}
-          <FruitList />
-      </div>
-    )
-  }
+    {/* Example 5 */}
+    <User isLoggedIn={false}/>
+    </>
+  )
 }
 
 export default App
