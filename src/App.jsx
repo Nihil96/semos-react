@@ -1,32 +1,16 @@
-
-
-import { useState } from 'react'
-import './App.css'
-import EffectOnce from './examples/lecture_4/components/effectOnce'
-import EffectUnmount from './examples/lecture_4/components/EffectUnmount'
-import EffectWithDeps from './examples/lecture_4/components/effectWithDeps'
-import SimpleEffect from './examples/lecture_4/components/simpleEffect'
-import InfiniteLoop from './examples/lecture_4/components/infiniteLoop'
-import TextInput from './examples/lecture_4/components/textInput'
-import Users from './examples/lecture_4/components/users'
-
+import "./App.css";
+import ColorChange from "./examples/lecture_5/components/colorChange";
+import KeyboardEvents from "./examples/lecture_5/components/keyboardEvents";
+import MouseEvents from "./examples/lecture_5/components/mouseEvents";
 
 function App() {
-  // const [showComponent, setShowComponent] = useState(true)
-
-
-  return(
+  return (
     <>
-      {/* <SimpleEffect /> */}
-      {/* <EffectOnce /> */}
-      {/* <EffectWithDeps /> */}
-      {/* {showComponent ? <EffectUnmount showComponent={showComponent} /> : null}
-      <button onClick={() => setShowComponent(!showComponent)}>{showComponent ? `Hide` : `Show`}</button> */}
-      {/* <InfiniteLoop /> */}
-      {/* <TextInput /> */}
-      <Users />
+      {/* <MouseEvents /> */}
+      {/* <KeyboardEvents /> */}
+      <ColorChange />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
