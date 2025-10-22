@@ -1,14 +1,20 @@
 import "./App.css";
-import ColorChange from "./examples/lecture_5/components/colorChange";
-import KeyboardEvents from "./examples/lecture_5/components/keyboardEvents";
-import MouseEvents from "./examples/lecture_5/components/mouseEvents";
+import BasicForm from "./examples/lecture_6/components/basicForm";
+import CheckboxForm from "./examples/lecture_6/components/checkboxForm";
+import DropdownForm from "./examples/lecture_6/components/dropdownForm";
+import FormWithValidation from "./examples/lecture_6/components/formWithValidation";
+import RadioButtonForm from "./examples/lecture_6/components/radioButtonForm";
+import UncontroledForm from "./examples/lecture_6/components/uncontrolledForm";
 
 function App() {
   return (
     <>
-      {/* <MouseEvents /> */}
-      {/* <KeyboardEvents /> */}
-      <ColorChange />
+      {/* <BasicForm /> */}
+      {/* <CheckboxForm /> */}
+      {/* <RadioButtonForm /> */}
+      {/* <DropdownForm /> */}
+      {/* <FormWithValidation /> */}
+      <UncontroledForm />
     </>
   );
 }
