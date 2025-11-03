@@ -5,6 +5,8 @@ import UserProvider from "./examples/lecture_8/context/userContext";
 import Navbar from "./examples/lecture_8/components/navbar";
 import ParentCounter from "./examples/lecture_8/components/parentCounter";
 import CounterProvider from "./examples/lecture_8/context/counterContext";
+import UsersManagement from "./exercises/exercises_1/components/UsersManagement";
+import { UsersProvider } from "./exercises/exercises_1/context/usersContext";
 
 function App() {
   // const [user] = useState({name: "Michael", age: 30})
@@ -13,14 +15,18 @@ function App() {
     <>
     {/* Example 1 */}
     {/* <Header user={user} /> */} 
-    <UserProvider>
+    {/* <UserProvider>
       <Header />
-    </UserProvider>
+    </UserProvider> */}
 
     {/* Example 2 */}
-    <CounterProvider>
+    {/* <CounterProvider>
       <ParentCounter />
-    </CounterProvider>
+    </CounterProvider> */}
+
+   <UsersProvider>
+     <UsersManagement />
+   </UsersProvider>
     </>
   );
 }
