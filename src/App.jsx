@@ -4,6 +4,7 @@ import UsersDetail from "./examples/lecture_9/components/usersDetail";
 import { calculateAverage } from "./examples/lecture_9/helpers/calculateAverage";
 import { useAverage } from "./examples/lecture_9/hooks/useAverage";
 import useCounter from "./examples/lecture_9/hooks/useCounter";
+import WindowSizeDisplay from "./exercises/exercise_2/components/windowSizeDisplay";
 
 function App() {
   const {counter, increment} = useCounter(100)
@@ -23,6 +24,8 @@ function App() {
        {/* Example 3 */}
        <h2>Average: {average}</h2> {/* result from the custom hook */}
        <h2>Average: {averageNumber}</h2> {/* result from the helper function */}
+
+       <WindowSizeDisplay />
     </>
   );
 }
