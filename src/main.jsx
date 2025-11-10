@@ -3,13 +3,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import UserProvider from './examples/lecture_8/context/userContext.jsx'
-import CounterProvider from './examples/lecture_8/context/counterContext.jsx'
+import { Provider } from 'react-redux'
+import { store } from './examples/lecture_10/store.js'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
   <BrowserRouter>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </BrowserRouter>
   // </StrictMode>,
 )
